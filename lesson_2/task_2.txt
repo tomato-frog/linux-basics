@@ -41,7 +41,7 @@ cp file1.txt file2.txt
 mkdir catalog1
 
 # Создать подкаталог созданного каталога
-cd my_directory # переместились в нужный каталог
+cd catalog1 # переместились в нужный каталог
 mkdir catalog1.1 # создали подкаталог catalog1.1 в каталоге catalog1
 
 # Переместить файл в подкаталог
