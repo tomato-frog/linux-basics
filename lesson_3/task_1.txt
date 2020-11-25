@@ -7,4 +7,4 @@ sudo useradd -s /bin/bash -d /home/user1 -m user1
 sudo userdel -r user1
 
 # c) создать пользователя, используя утилиту adduser.
-sudo adduser -r user2
+sudo adduser user2
