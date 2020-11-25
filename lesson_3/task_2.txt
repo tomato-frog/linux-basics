@@ -1,0 +1,14 @@
+# 2. Управление группами:
+
+# a) создать группу с использованием утилит;
+sudo groupadd group1
+sudo addgroup group2
+
+# b) попрактиковаться в смене групп у пользователей;
+sudo addgroup group1 user1
+
+# c) добавить пользователя в группу, не меняя основной;
+sudo usermod -aG group2 user2
+
+# d) удалить пользователя из группы.
+sudo usermod -G group2 user2

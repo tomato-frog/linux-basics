@@ -1,0 +1,10 @@
+# 1. Управление пользователями:
+
+# a) создать пользователя, используя утилиту useradd;
+sudo useradd -s /bin/bash -d /home/user1 -m user1
+
+# b) удалить пользователя, используя утилиту userdel;
+sudo userdel -r user1
+
+# c) создать пользователя, используя утилиту adduser.
+sudo adduser -r user2
