@@ -1,0 +1,21 @@
+# Конвейер (pipeline).
+# Использовать команду cut на вывод длинного списка каталога, чтобы отобразить только права доступа к файлам.
+ls -l | tail -n +2 | cut -d ' ' -f 1
+
+# Вывод:
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+-rw-rw-r--
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+drwxr-xr-x
+
+# Затем отправить в конвейере этот вывод на sort и uniq, чтобы отфильтровать все повторяющиеся строки.
+ls -l | tail -n +2 | cut -d ' ' -f 1 | sort | uniq
+
+# Вывод:
+drwxr-xr-x
+-rw-rw-r--
