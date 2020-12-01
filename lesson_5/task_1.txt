@@ -1,0 +1,27 @@
+# Создать файл file1 и наполнить его произвольным содержимым.
+echo 'Hello there!' > file1.txt
+
+# Скопировать его в file2.
+cp file1.txt file2.txt
+
+# Создать символическую ссылку file3 на file1.
+ln -s file1.txt file3.txt
+
+# Создать жёсткую ссылку file4 на file1.
+ln file1.txt file4.txt
+
+# Посмотреть, какие inode у файлов.
+ls -li
+# Вывод:
+391227 -rw-rw-r-- 2 reima reima 12 Dec  1 13:33 file1.txt
+423234 -rw-rw-r-- 1 reima reima 12 Dec  1 13:39 file2.txt
+423419 lrwxrwxrwx 1 reima reima  9 Dec  1 13:41 file3.txt -> file1.txt
+391227 -rw-rw-r-- 2 reima reima 12 Dec  1 13:33 file4.txt
+
+# Удалить file1.
+rm file1.txt
+
+# Что стало с остальными созданными файлами? Попробовать вывести их на экран.
+cat file2.txt # Вывод: Hello there!
+cat file4.txt # Вывод: Hello there!
+file3.txt невозможно вывести, т.к был удален file1.txt

@@ -1,0 +1,10 @@
+# Дать созданным файлам другие, произвольные имена.
+mv file2.txt newfile2.txt
+mv file4.txt newfile4.txt
+
+# Создать новую символическую ссылку.
+ln -s newfile4.txt file5.txt
+
+# Переместить ссылки в другую директорию.
+mv newfile4.txt ../dir1
+mv file5.txt ../dir1
