@@ -8,5 +8,11 @@ deb http://nginx.org/packages/ubuntu focal nginx
 # Пишем ключ, который используется для проверки
 curl -fsSL https://nginx.org/keys/nginx_signing.key | sudo apt-key add -
 
+# Обновляем источники репозиториев
+sudo apt update
+
+#Устанавливаем nginx
+sudo apt install nginx
+
 # Удаляем с помощью утилиты dpkg
 sudo dpkg -r nginx
